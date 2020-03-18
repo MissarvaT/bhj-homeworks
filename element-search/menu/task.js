@@ -11,8 +11,9 @@ for (let i=0; i<parentMenuItems.length; i++ ){
     };
 
     parentMenuItems[i].onclick = function() {
+
         let subMenuStatus = subMenus.map(item => item.className);
-        if (subMenuStatus.includes("menu menu_sub menu_active")) {
+        if (subMenuStatus.includes("menu menu_sub menu_active") && subMenus[i].className != "menu menu_sub menu_active") {
             subMenus.forEach(item => item.className = "menu menu_sub");  
         };
 
