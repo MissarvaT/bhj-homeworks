@@ -16,7 +16,7 @@ let imageSetter = function(number) {
         dotsArray.forEach(item => item.className = 'slider__dot');
     };
     slidesArray[number].className = 'slider__item slider__item_active';
-    dotsArray[number].className = 'slider__dot_active';
+    dotsArray[number].className = 'slider__dot slider__dot_active';
 };
 
 leftArrow.onclick = function() {
