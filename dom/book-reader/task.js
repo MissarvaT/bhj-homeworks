@@ -3,6 +3,7 @@
 let fontButtons = Array.from(document.querySelectorAll('.font-size'));
 
 let changeSize = function() {
+
     for (let i=0; i < fontButtons.length; i++) {
         if (fontButtons[i].classList.contains('font-size_active')) {
             fontButtons[i].classList.remove('font-size_active');
@@ -27,4 +28,7 @@ let changeSize = function() {
 
 for (let i=0; i <fontButtons.length; i++) {
     fontButtons[i].addEventListener('click', changeSize);
+    fontButtons[i].onclick = () => {
+        return false;
+    };
 };
