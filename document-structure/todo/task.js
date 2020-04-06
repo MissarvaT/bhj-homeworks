@@ -2,6 +2,11 @@
 
 let input = document.querySelector('.tasks__input');
 let tasksList = document.querySelector('.tasks__list');
+let form = document.querySelector('.tasks__control');
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+});
 
 let addTask = function (event) {
     if (input.value !== '' && event.code === 'Enter'){
