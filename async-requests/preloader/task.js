@@ -13,7 +13,7 @@ xhr.addEventListener( 'readystatechange', function() {
         let data = JSON.parse(this.responseText);
         let currencyInfo = data.response.Valute;
         let properties = Object.getOwnPropertyNames(currencyInfo);
-        let result;
+        let result = '';
         for (let i = 0; i < properties.length; i++) {
             result += `<div class="item">
             <div class="item__code">${currencyInfo[properties[i]]['CharCode']}</div>
@@ -25,5 +25,4 @@ xhr.addEventListener( 'readystatechange', function() {
         loader.classList.remove('loader_active');
     }; 
 })
-
 xhr.send();
