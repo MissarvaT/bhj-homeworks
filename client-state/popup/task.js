@@ -4,7 +4,7 @@ let pop = document.getElementById('subscribe-modal');
 let closeButton = document.querySelector('.modal__close');
 
 window.addEventListener('load', () => {
-    if (getCookie('popClosed') !== 'closed')
+    if (getCookie('pop') !== 'closed')
         pop.classList.add('modal_active');
 });
 
